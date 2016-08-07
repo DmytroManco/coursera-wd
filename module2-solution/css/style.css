@@ -1,0 +1,97 @@
+/*Common styles*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.container{
+    margin: 40px;
+}
+
+.section{
+    margin-bottom: 20px;
+    position: relative;
+    padding: 20px;
+    float: left;
+    width: 100px;
+    height: auto;
+    border: 1px solid black;
+}
+
+.section-1{
+    background-color: yellowgreen;
+}
+
+.section-2{
+    background-color: palevioletred;
+}
+
+.section-3{
+    background-color: cornflowerblue;
+}
+
+.sub-header{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100px;
+    font-size: 1.2rem;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: gold;
+    border: 1px solid black;
+}
+
+.section-2 .sub-header {
+    background-color: green;
+    color: #fff;
+}
+
+.section-3 .sub-header {
+    background-color: darkred;
+    color: #fff;
+}
+
+.content{
+    padding: 20px;
+}
+
+/*Media*/
+@media (max-width: 767px) {
+    .section{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .section{
+        width: 48%;
+    }
+    .section-2{
+        margin-left: 4%;
+    }
+    .section-3{
+        width: 100%;
+    }
+}
+
+@media  (min-width: 992px) {
+    .section{
+        width: 32%;
+    }
+    .section-2{
+        margin-left: 2%;
+    }
+    .section-3 {
+        margin-left: 2%;
+    }
+}
