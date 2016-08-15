@@ -1,0 +1,39 @@
+#navbar{
+    background-color: #000;
+    border-radius: 0;
+}
+
+.navbar-brand a{
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.navbar-brand a:hover{
+    text-decoration: none;
+}
+
+#menu li a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#menu li a:hover{
+    background-color: darkred;
+    font-size: 1.2em;
+    transition: .9s;
+}
+
+#content section {
+    background-color: powderblue;
+    border-radius: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#content section  h3{
+    padding: 10px;
+    font-style: italic;
+    color: #222;
+    font-weight: bold;
+}
