@@ -1,0 +1,9 @@
+<h3 style="clear: both">{{ ctrl.msg}}</h3>
+<ul>
+    <li ng-repeat="item in ctrl.foundItems" style="list-style: none">
+        <h4>{{item.name}} ({{item.short_name}})</h4>
+        <p>{{item.description}}</p>
+        <button ng-click="ctrl.onRemove({index: $index});" class="btn btn-danger" type="button" name="button">Don't want this one!</button>
+        <hr>
+    </li>
+</ul>
