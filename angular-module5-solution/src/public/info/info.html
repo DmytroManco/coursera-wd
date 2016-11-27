@@ -1,0 +1,16 @@
+<div class="container">
+       <h2>You Profile</h2>
+        <p>{{infoCtrl.message}}</p>
+
+        <div ng-if="infoCtrl.registred">
+            <p>{{infoCtrl.userData.firstName}} {{infoCtrl.userData.lastName}}</p>
+            <p>{{infoCtrl.userData.phone}} {{infoCtrl.userData.email}}</p>
+            <h4>Favorite Dish :</h4>
+            <h5><b>{{infoCtrl.userData.title}}</b></h5>
+            <img ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.userData.img}}.jpg"><br>
+            <p>
+                {{infoCtrl.userData.description}}
+            </p>
+        </div>
+</div>
+

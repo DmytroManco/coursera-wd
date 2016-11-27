@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="col-md-8">
+        <h3 class="text-center">Hola! Sing Up!</h3>
+        <form novalidate name="signUpForm">
+            <label for="firstName">First Name :</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name"
+                   ng-model="signCtrl.user.firstName" minlength="2" required>
+
+            <span ng-if="(signUpForm.firstName.$error.minlength ||
+            signUpForm.firstName.$error.required) && signUpForm.firstName.$touched">
+                This field must be at least 2 characters long.
+            </span>
+            <br>
+
+            <label for="lastName">Last Name :</label>
+            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name"
+                   ng-model="signCtrl.user.lastName" minlength="2" required>
+            <span ng-if="(signUpForm.lastName.$error.minlength || signUpForm.lastName.$error.required)
+            && signUpForm.lastName.$touched">
+                Last name must be at least 2 characters long.
+            </span>
+            <br>
+
+            <label for="email">Email :</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email address"
+                   ng-model="signCtrl.user.email" required/>
+            <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
+                Must be a valid email address: handle@domain format.
+            </span>
+            <br>
+
+            <label for="phone">Phone number :</label>
+            <input type="tel" name="phone" class="form-control" id="phone" placeholder="###-###-####"
+                   ng-model="signCtrl.user.phone" pattern="(\d{3})-(\d{3})-(\d{4})" required/>
+            <span ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
+                Phone's format must be ###-###-####.
+            </span>
+
+            <br>
+            <label for="favDish">Favorite dish :</label>
+            <input type="text" name="favoriteDish" class="form-control" id="favDish" placeholder="Short name"
+                   ng-model="signCtrl.user.favDish" minlength="2" required/>
+
+            <br>
+
+            <button ng-disabled="signUpForm.$invalid" ng-click="signCtrl.submit(signCtrl.user)"
+                    class="btn btn-default"> Submit
+            </button>
+
+        </form>
+
+        <p class="lead">{{ signCtrl.message }}</p>
+    </div>
+
+</div>
